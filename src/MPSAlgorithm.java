@@ -1,4 +1,7 @@
+import Entity.Variable;
+
 public class MPSAlgorithm {
+
     /**
      * 开始SNESIM模拟
      */

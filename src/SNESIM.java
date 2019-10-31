@@ -1,14 +1,12 @@
+import Entity.Coords3D;
 import Util.CoordsUtil;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Vector;
+import java.util.*;
 
 public class SNESIM {
 
     //list of available faces in the template
-    Vector<Coords3D> templateFaces = new Vector<>();
+    ArrayList<Coords3D> templateFaces = new ArrayList<>();
 
     /**
      * Construct template faces and sort them around template center
@@ -105,4 +103,7 @@ public class SNESIM {
         return foundValue;
     }
 
+    public ArrayList<Coords3D> getTemplateFaces() {
+        return templateFaces;
+    }
 }

@@ -1,3 +1,5 @@
+package Entity;
+
 public class Coords3D {
 
     private int x;
@@ -16,4 +18,15 @@ public class Coords3D {
         this.z = z;
     }
 
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public int getZ() {
+        return z;
+    }
 }
