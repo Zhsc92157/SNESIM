@@ -2,10 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e825b2f-f8e7-49a0-ba4b-2a8f9245e194" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Entity/TreeNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Coords3D.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MPS/Coords3D.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MPS/SNESIM.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MPS/SNESIM.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MPS/Util/CoordsUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MPS/Util/CoordsUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Variable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Variable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MPSAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MPSAlgorithm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SNESIM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SNESIM.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Variable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SNESIMTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SNESIMTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Util/CoordsUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Util/CoordsUtil.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,7 +67,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.test">
+  <component name="RunManager" selected="Application.Test">
     <configuration name="RWFiles" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="IO.RWFiles" />
       <module name="MPS" />
@@ -80,6 +88,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test" />
+      <module name="MPS" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="demo.test" />
       <module name="MPS" />
@@ -89,6 +104,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Test" />
         <item itemvalue="Application.test" />
         <item itemvalue="Application.SearchTree" />
         <item itemvalue="Application.RWFiles" />
@@ -125,6 +141,13 @@
       <workItem from="1572422969621" duration="14972000" />
       <workItem from="1572497687339" duration="98000" />
       <workItem from="1572497840158" duration="18509000" />
+      <workItem from="1572829014287" duration="42000" />
+      <workItem from="1573111423653" duration="4809000" />
+      <workItem from="1573177158893" duration="89000" />
+      <workItem from="1573261132915" duration="7148000" />
+      <workItem from="1573383189543" duration="180000" />
+      <workItem from="1574318940169" duration="6876000" />
+      <workItem from="1574483549551" duration="4541000" />
     </task>
     <servers />
   </component>

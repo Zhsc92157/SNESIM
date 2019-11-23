@@ -15,4 +15,8 @@ public class CoordsUtil {
         return new int[] {x, y, z};
     }
 
+    public static int threeD2OneD(int iDx, int iDy, int iDz, int dimX, int dimY){
+        return iDx + dimX*(iDy+iDz*iDy);
+    }
+
 }

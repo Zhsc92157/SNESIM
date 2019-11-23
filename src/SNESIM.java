@@ -1,4 +1,5 @@
 import Entity.Coords3D;
+import Entity.Variable;
 import Util.CoordsUtil;
 
 import java.util.*;
@@ -38,6 +39,7 @@ public class SNESIM {
             if (offsetX!=0 || offsetY!=0 || offsetZ!=0)
                 templateFaces.add(new Coords3D(offsetX,offsetY,offsetZ));
         }
+        Variable.templateFaces = templateFaces;
     }
 
     /**
