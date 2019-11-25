@@ -31,8 +31,8 @@ public class Variable {
     public static int templateSizeY = 7;
     public static int templateSizeZ = 1;
     //simulation grid size
-    public static int simGridSizeX = 80;
-    public static int simGridSizeY = 80;
+    public static int simGridSizeX = 20;
+    public static int simGridSizeY = 20;
     public static int simGridSizeZ = 1;
     //Simulation Grid World min X
     public int simGridWorldMinX = 0;
@@ -50,7 +50,7 @@ public class Variable {
     public static String TRAINING_FILE = "ti_cb_4x4_40_40_1.dat";
     public static double[][][] ti;
     //simulation grid
-    public static double[][][] sg = new double[simGridSizeZ][simGridSizeY][simGridSizeX];
+    public static double[][][] sg;
     //hard data grid
     public static double[][][] hdg;
     //temp grid 1
@@ -68,9 +68,9 @@ public class Variable {
      * @throws IOException
      */
     public void readTrainingFile() throws IOException {
-        int x = 0;
-        int y = 0;
-        int z = 0;
+        int tiX = 0;
+        int tiY = 0;
+        int tiZ = 0;
         System.out.println("读取训练图像");
         File file  = new File(TRAINING_FILE);
         BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
@@ -82,24 +82,23 @@ public class Variable {
                 strLine = strLine.replace(" ","");
             }else{
                 String[] s = strLine.split(" ");
-                x = Integer.parseInt(s[0]);
-                y = Integer.parseInt(s[1]);
-                z = Integer.parseInt(s[2]);
-                tiDimX = x;
-                tiDimY = y;
-                tiDimZ = z;
-                ti = new double[z][y][x];
+                tiX = Integer.parseInt(s[0]);
+                tiY = Integer.parseInt(s[1]);
+                tiZ = Integer.parseInt(s[2]);
+                tiDimX = tiX;
+                tiDimY = tiY;
+                tiDimZ = tiZ;
+                ti = new double[tiZ][tiY][tiX];
             }
             if (lineCount >= 3){
                 value.add(Double.parseDouble(strLine));
-                System.out.println(Double.parseDouble(strLine));
             }
             lineCount++;
         }
         int cnt = 0;
-        for (int i = 0; i < z; i++) {
-            for (int j = 0; j < x; j++){
-                for (int k = 0; k < y; k++){
+        for (int i = 0; i < tiZ; i++) {
+            for (int j = 0; j < tiX; j++){
+                for (int k = 0; k < tiY; k++){
                     ti[i][k][j] = value.get(cnt);
                     cnt++;
                 }
@@ -107,11 +106,36 @@ public class Variable {
         }
 
         System.out.println("读取图像完成");
+        showTrainingImage();
+
+        //初始化模拟格网
+        sg = new double[simGridSizeZ][simGridSizeY][simGridSizeX];
+        for (int z = 0; z < simGridSizeZ; z++) {
+            for (int y = 0; y < simGridSizeY; y++) {
+                for (int x = 0; x < simGridSizeX; x++) {
+                    sg[z][y][x] = Double.NaN;
+                }
+            }
+        }
 
         hdg = sg;
         tg1 = sg;
         tg2 = sg;
 
+
+    }
+
+    public static void showTrainingImage(){
+        System.out.println("TI:");
+        for (int z = 0; z < ti.length; z++) {
+            System.out.println("Z: "+ (z + 1));
+            for (int y = 0; y < ti[0].length; y++) {
+                for (int x = 0; x < ti[0][0].length; x++) {
+                    System.out.print(ti[z][y][x]+" ");
+                }
+                System.out.println();
+            }
+        }
     }
 
     /**

@@ -2,14 +2,9 @@ import Entity.Coords3D;
 import Entity.Variable;
 import Util.CoordsUtil;
 
-import javax.print.attribute.standard.RequestingUserName;
-import java.io.IOException;
-import java.sql.Time;
 import java.time.Clock;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
-import java.util.Timer;
 
 import static Entity.Variable.showSimulationGrids;
 
